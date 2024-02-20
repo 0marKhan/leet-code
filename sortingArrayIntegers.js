@@ -1,6 +1,9 @@
 const sortArray = (arr) => {
   let temp;
   for (let i = 0; i < arr.length; i++) {
+    // arr.length - 1 - i
+    //  - 1 because during swapping we use arr[j + 1] sp we're trying to not go out of bounds
+    // - i because skipping over the aready sorted numbers
     for (let j = 0; j < arr.length - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
         temp = arr[j];
